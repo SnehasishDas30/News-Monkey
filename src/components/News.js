@@ -31,8 +31,7 @@ export default class News extends Component {
   async updateNews() {
     this.props.setProgress(10);
 
-    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=ddd4db81480e4eebb2f579ca8b78a47f&page=${this.state.page}&pageSize=${this.props.pageSize}`;
-
+const url = `https://gnews.io/api/v4/top-headlines?category=${this.props.category}&lang=en&country=us&max=${this.props.pageSize}&apikey=e43c57a15e275612f90dfa7933c004e8`;
     this.setState({ loading: true });
 
     let data = await fetch(url);
@@ -69,8 +68,7 @@ export default class News extends Component {
   };
 
   fetchMoreData = async () => {
-    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=ddd4db81480e4eebb2f579ca8b78a47f&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
-
+const url = `https://gnews.io/api/v4/top-headlines?category=${this.props.category}&lang=en&country=us&max=${this.props.pageSize}&apikey=e43c57a15e275612f90dfa7933c004e8`;
     const nextPage = this.state.page + 1;
 
     this.setState({ loading: true });
@@ -111,11 +109,11 @@ export default class News extends Component {
                           ? element.description.slice(0, 88)
                           : ""
                       }
-                      imageUrl={element.urlToImage}
+                      imageUrl={element.image}
                       newsUrl={element.url}
                       author={element.author}
                       date={element.publishedAt}
-                      source={element.source.name}
+                      source={element.source?.name}
                     />
                   </div>
                 );

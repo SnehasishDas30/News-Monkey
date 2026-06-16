@@ -37,27 +37,111 @@ export default class App extends Component {
             element={
               <News
                 setProgress={this.setProgress}
-                key="general"
+                key="world"
                 pageSize={this.pagesize}
                 country="us"
-                category="general"
+                category="world"
               />
             }
           />
 
-          <Route exact path="/general" element={<News setProgress={this.setProgress} key="general" pageSize={this.pagesize} country="us" category="general" />} />
+          <Route
+            exact
+            path="/general"
+            element={
+              <News
+                setProgress={this.setProgress}
+                key="world"
+                pageSize={this.pagesize}
+                country="us"
+                category="world"
+              />
+            }
+          />
 
-          <Route exact path="/sports" element={<News setProgress={this.setProgress} key="sports" pageSize={this.pagesize} country="us" category="sports" />} />
+          <Route
+            exact
+            path="/sports"
+            element={
+              <News
+                setProgress={this.setProgress}
+                key="sports"
+                pageSize={this.pagesize}
+                country="us"
+                category="sports"
+              />
+            }
+          />
 
-          <Route exact path="/business" element={<News setProgress={this.setProgress} key="business" pageSize={this.pagesize} country="us" category="business" />} />
+          <Route
+            exact
+            path="/business"
+            element={
+              <News
+                setProgress={this.setProgress}
+                key="business"
+                pageSize={this.pagesize}
+                country="us"
+                category="business"
+              />
+            }
+          />
 
-          <Route exact path="/technology" element={<News setProgress={this.setProgress} key="technology" pageSize={this.pagesize} country="us" category="technology" />} />
+          <Route
+            exact
+            path="/technology"
+            element={
+              <News
+                setProgress={this.setProgress}
+                key="technology"
+                pageSize={this.pagesize}
+                country="us"
+                category="technology"
+              />
+            }
+          />
 
-          <Route exact path="/entertainment" element={<News setProgress={this.setProgress} key="entertainment" pageSize={this.pagesize} country="us" category="entertainment" />} />
+          <Route
+            exact
+            path="/entertainment"
+            element={
+              <News
+                setProgress={this.setProgress}
+                key="entertainment"
+                pageSize={this.pagesize}
+                country="us"
+                category="entertainment"
+              />
+            }
+          />
 
-          <Route exact path="/health" element={<News setProgress={this.setProgress} key="health" pageSize={this.pagesize} country="us" category="health" />} />
+          <Route
+            exact
+            path="/health"
+            element={
+              <News
+                setProgress={this.setProgress}
+                key="health"
+                pageSize={this.pagesize}
+                country="us"
+                category="health"
+              />
+            }
+          />
 
-          <Route exact path="/science" element={<News setProgress={this.setProgress} key="science" pageSize={this.pagesize} country="us" category="science" />} />
+          <Route
+            exact
+            path="/science"
+            element={
+              <News
+                setProgress={this.setProgress}
+                key="science"
+                pageSize={this.pagesize}
+                country="us"
+                category="science"
+              />
+            }
+          />
 
         </Routes>
 
