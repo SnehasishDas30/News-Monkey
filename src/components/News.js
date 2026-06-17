@@ -43,6 +43,7 @@ const url = `https://gnews.io/api/v4/top-headlines?category=${this.props.categor
     this.props.setProgress(70);
 
     console.log(parsedData);
+    
 
     this.setState({
       articles: parsedData.articles || [],
